@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Neva: Welcome </title>
+    <link rel="stylesheet" href="assets/css/material-bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-12 m-top-2">
+            <h2>Technologies Used: </h2>
+            <p>
+                <ol>
+                    <li> PHP CodeIgniter </li>
+                    <li> <a href="https://github.com/chriskacerguis/codeigniter-restserver">CodeIgniter REST Server</a> </li>
+                    <li> Bootstrap </li>
+                    <li> jQuery for AJAX calls </li>
+                    <li> MySQL </li>
+                </ol>
+            </p>
+    
+            <h2>Set up</h2>
+            <p>
+                Copy the directory to your webroot. Import SQL file. DB config file path: /api/application/config/database.php
+            </p>
+
+            <h3>Flow</h3>
+            <p>
+                
+                As per the document, I have inserted 2 users. But you can register with new user to test from beginning.
+
+                <ol>
+                    <li>
+                        Registration: If email id does not exists, account will be created. Then we need to log in to proceed. Form shows relavent server responses. Like user exists, account creations successfull.
+                    </li>
+                    <li>
+                        Login: On correct auth credentials, page will be redirected to dashboard. Form will show relavent server response. Like login success, wrong username/password.
+                    </li>
+                    <li>
+                        On successfull login, I am saving user id in localStorage for session management. So, on logout, we must not access dashboard.html
+                    </li>
+                    <li>
+                        In Dashboard: Adding Friend: An account must exists to send a message. Relavent server response is privided. Ex: User does not exists, Friend is allready added you can send message, Friend addedd successfuly.
+                    </li>
+                    <li>
+                        In Dashboard: On page load list of friends are shows. After adding a new friend the same method is re-called to reload the list.
+                    </li>
+                    <li>
+                        In Dashboard: Clicking on Chat button will display the chats w.r.t the selected friend. We can send a message from the input box given. Clicking on Chat button again will refresh the chats. Auto refreshing of chats is not yet done. The chat will be re-loaded once we send the message.
+                    </li>
+                    <li>
+                        Logout: Will clear the session in server, then clears localStorage
+                    </li>
+                    <li>
+                        Password are stored as MD5.
+                    </li>
+                    <li>
+                        Relavent MySQL fields are indexed.
+                    </li>
+                    <li>
+                        RESTful architecture.
+                    </li>
+                    <li>
+                        Existing user credentials: <br>
+                        username: alice@gmail.com   password: 12345 <br>
+                        username: bob@gmail.com   password: 12345 <br>
+                    </li>
+
+                </ol>
+
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
